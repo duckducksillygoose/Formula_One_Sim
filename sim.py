@@ -31,8 +31,12 @@ car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
 
 
 for car in car_list:
-    patch = pat.Circle(car.pos, 10, color = car.colour)
+    patch = pat.Circle(car.pos, 20, color = car.colour)
     ax.add_patch(patch)
-    ax.annotate(car.driver, car.pos, color = "white")
+    ax.annotate(car.driver, car.pos, color = "black")
+
+#updating position
+
+
 
 plt.show()
