@@ -30,13 +30,18 @@ plt.imshow(track)
 car_list = []
 
 car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
+car_list.append(Car("Ferrari", "CL", "#c92216", (213, 326)))
+
+
 
 for i in range(0, len(curve_points)):
     ax.clear()
     ax.imshow(track)
     
-    for car in car_list:
-        car.pos = curve_points[i]
+    
+    for j, car in enumerate(car_list):
+        index = (i*(j+1)) % len(curve_points)
+        car.pos = curve_points[index]
         patch = pat.Circle(car.pos, 20, color = car.colour)
         ax.add_patch(patch)
         ax.annotate(car.driver, car.pos, color = "black")
