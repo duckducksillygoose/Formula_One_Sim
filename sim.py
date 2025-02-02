@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as pat
 import matplotlib.image as im
 from class_file import Car
+import time
 
 #getting contours from image
 image = cv2.imread('barcelona.png', cv2.IMREAD_GRAYSCALE)
@@ -34,13 +35,11 @@ for car in car_list:
     patch = pat.Circle(car.pos, 20, color = car.colour)
     ax.add_patch(patch)
     ax.annotate(car.driver, car.pos, color = "black")
-
-#updating position
-
-for i in range(curve_points):
-    car.pos = curve_points[i]
-    ax.clear()
-    time.sleep(0.5)
+    
+    for i in range(0, len(curve_points)):
+        car.pos = curve_points[i]
+        ax.clear()
+        time.sleep(0.5)
 
 
 plt.show()
