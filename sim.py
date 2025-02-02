@@ -31,15 +31,16 @@ car_list = []
 car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
 
 
-for car in car_list:
-    patch = pat.Circle(car.pos, 20, color = car.colour)
-    ax.add_patch(patch)
-    ax.annotate(car.driver, car.pos, color = "black")
-    
-    for i in range(0, len(curve_points)):
+for i in range(0, len(curve_points)):
         car.pos = curve_points[i]
         ax.clear()
         time.sleep(0.5)
+        
+        for car in car_list:
+             patch = pat.Circle(car.pos, 20, color = car.colour)
+             ax.add_patch(patch)
+             ax.annotate(car.driver, car.pos, color = "black")
+    
+    
 
 
-plt.show()
