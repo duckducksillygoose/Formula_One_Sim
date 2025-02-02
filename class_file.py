@@ -6,8 +6,9 @@ import matplotlib.patches as pat
 
 #team colour codes:
 class Car():
-    def __init__ (self, team, driver):
+    def __init__ (self, team, driver, colour, pos):
         self.team = team
         self.driver = driver
-        self.colour =  team_colours.get(team, "gray")
+        self.colour =  colour
+        self.pos = pos
 
