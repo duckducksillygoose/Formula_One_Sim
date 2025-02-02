@@ -41,7 +41,7 @@ for i in range(0, len(curve_points)):
         ax.annotate(car.driver, car.pos, color = "black")
 
         plt.pause(0.1)
-        plt.draw()
+
             
     
 plt.close(fig) 
