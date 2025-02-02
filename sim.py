@@ -1,6 +1,7 @@
 #simulation file for car project
 
 import cv2
+import random
 import matplotlib.pyplot as plt
 import matplotlib.patches as pat
 import matplotlib.image as im
