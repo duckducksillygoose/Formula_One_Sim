@@ -26,6 +26,10 @@ track= im.imread('barcelona.png')
 plt.imshow(track)
 
 car_list = []
+
+car_list.append("williams", "AA", "#4e6cd9", (847, 126))
+
+
 for car in car_list:
     patch = pat.Circle(car.pos, 3, color = car.colour)
     ax.add.patch(patch)
