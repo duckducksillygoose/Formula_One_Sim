@@ -27,6 +27,8 @@ plt.imshow(track)
 
 car_list = []
 for car in car_list:
-    plot_me(car)
+    patch = pat.Circle(car.pos, 3, color = car.colour)
+    ax.add.patch(patch)
+    ax.annotate(car.driver, car.pos, color = "white")
 
 plt.show()
