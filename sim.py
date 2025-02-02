@@ -37,6 +37,10 @@ for car in car_list:
 
 #updating position
 
+for i in range(curve_points):
+    car.pos = curve_points[i]
+    ax.clear()
+    time.sleep(0.5)
 
 
 plt.show()
