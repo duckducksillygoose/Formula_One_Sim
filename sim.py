@@ -29,8 +29,10 @@ plt.imshow(track)
 
 car_list = []
 
+car_list.append(Car("McLaren", "LN", "#c84274", (213, 326)))
 car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
 car_list.append(Car("Ferrari", "CL", "#c92216", (213, 326)))
+
 
 
 
