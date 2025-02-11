@@ -37,6 +37,9 @@ car_list.append(Car("Ferrari", "CL", "#c92216", (213, 326)))
 
 
 for i in range(0, len(curve_points)):
+    ax.clear()
+    ax.imshow(track)
+
 
     for j, car in enumerate(car_list):
     
@@ -45,10 +48,10 @@ for i in range(0, len(curve_points)):
         patch = pat.Circle(car.pos, 20, color = car.colour)
         ax.add_patch(patch)
         ax.annotate(car.driver, car.pos, color = "black")
+    
+    fig.canvas.draw_idle()
+    plt.pause(0.1)
 
-        plt.pause(0.1)
-        ax.clear()
-        ax.imshow(track)
 
     
     
