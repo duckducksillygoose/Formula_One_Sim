@@ -53,11 +53,6 @@ for i in range(0, len(curve_points)):
     plt.pause(0.1)
 
 
-    
-    
-
-            
-    
 plt.close(fig) 
 
 
