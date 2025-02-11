@@ -43,14 +43,14 @@ for i in range(0, len(curve_points)):
 
     for j, car in enumerate(car_list):
     
-        index = (i*(j+1)) % len(curve_points)
+        index = (i*(j+25)) % len(curve_points)
         car.pos = curve_points[index]
         patch = pat.Circle(car.pos, 20, color = car.colour)
         ax.add_patch(patch)
         ax.annotate(car.driver, car.pos, color = "black")
     
     fig.canvas.draw_idle()
-    plt.pause(0.1)
+    plt.pause(0.01)
 
 
 plt.close(fig) 
