@@ -29,9 +29,16 @@ plt.imshow(track)
 
 car_list = []
 
-car_list.append(Car("McLaren", "LN", "#c84274", (213, 326)))
-car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
+car_list.append(Car("McLaren", "LN", "#f3a627", (213, 326)))
+car_list.append(Car("McLaren", "OP", "#f3a627", (213, 326)))
 car_list.append(Car("Ferrari", "CL", "#c92216", (213, 326)))
+car_list.append(Car("Ferrari", "LH", "#c92216", (213, 326)))
+car_list.append(Car("Red Bull", "MV", "#01405b", (213, 326)))
+car_list.append(Car("Red Bull", "LL", "#01405b", (213, 326)))
+car_list.append(Car("Mercedes", "GR", "#10ebce", (213, 326)))
+car_list.append(Car("Mercedes", "KA", "#10ebce", (213, 326)))
+car_list.append(Car("Williams", "CS", "#4e6cd9", (847, 126)))
+car_list.append(Car("Williams", "AA", "#4e6cd9", (847, 126)))
 
 
 
@@ -41,7 +48,7 @@ for i in range(0, len(curve_points)):
     ax.imshow(track)
 
 
-    for j, car in enumerate(car_list):
+    for j, car in enumerate(car_list[::-1]):
     
         index = (i*(j+25)) % len(curve_points)
         car.pos = curve_points[index]
