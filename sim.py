@@ -50,8 +50,8 @@ for i in range(0, len(curve_points)):
 
     for j, car in enumerate(car_list[::-1]):
     
-        index = (i*(j+25)) % len(curve_points)
-        car.pos = curve_points[index]
+        index = ((i*(j+25)) + (len(curve_points)%4)+random.randint(0,50))
+        car.pos = curve_points[index%3248]
         patch = pat.Circle(car.pos, 20, color = car.colour)
         ax.add_patch(patch)
         ax.annotate(car.driver, car.pos, color = "black")
